@@ -1,0 +1,77 @@
+.modal-enter {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  
+  .modal-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 400ms, transform 400ms;
+  }
+  
+  .modal-exit {
+    opacity: 1;
+  }
+  
+  .modal-exit-active {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: opacity 400ms, transform 400ms;
+  }
+  
+  
+  /* Add this to your CSS file */
+  .modal-button-transition-enter, .modal-button-transition-appear {
+    opacity: 0; /* Start with zero opacity */
+    transform: translateY(50px); /* Start slightly below the final position */
+  }
+  
+  .modal-button-transition-enter-active, .modal-button-transition-enter-appear {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 500ms ease, opacity 500ms ease; /* Adjust the duration and easing as needed */
+  }
+  
+  .modal-button-transition-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .modal-button-transition-exit-active {
+    opacity: 0;
+    transform: translateY(50px); /* Move slightly below during exit */
+    transition: transform 500ms ease, opacity 500ms ease; /* Adjust the duration and easing as needed */
+  }
+  
+
+  /* Sticky header container */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000; /* Ensure it stays on top */
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* CSSTransition classes for fade in/out */
+.sticky-header-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.sticky-header-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+.sticky-header-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sticky-header-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
